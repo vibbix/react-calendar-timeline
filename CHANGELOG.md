@@ -12,6 +12,7 @@ and this project adheres (more or less) to [Semantic Versioning](http://semver.o
 * Remove `interactjs` from `peerDependencies`; it is bundled into `dist`, so consumers no longer need to install it.
 * Point the `style` export condition at `dist/style.css`; `dist/Timeline.css` is not emitted by the build.
 * Move the sidebar row `line-height` from an inline style to the stylesheet (via the `--rct-sidebar-row-height` CSS variable), so multi-line `groupRenderer` content can override it with `.rct-sidebar-row { line-height: normal; }`.
+* Export `ItemRendererProps`, `GetItemPropsParams`, `GetResizeProps` and `TimelineContextType` so custom `itemRenderer`s can be typed without reaching into internal modules.
 
 ## 0.30.0 (beta.19)
 
