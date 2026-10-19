@@ -138,12 +138,13 @@ describe("Item", () => {
       const { container } = renderItem();
       const item = container.querySelector(".rct-item") as HTMLElement;
       expect(item.style.cursor).toBe("pointer");
+      expect(item.style.background).toBe("var(--rct-item-background, #2196f3)");
     });
 
     it("applies selected styles when selected", () => {
       const { container } = renderItem({ selected: true });
       const item = container.querySelector(".rct-item") as HTMLElement;
-      expect(item.style.background).toBe("rgb(255, 193, 7)"); // #ffc107
+      expect(item.style.background).toBe("var(--rct-item-selected-background, #ffc107)");
     });
 
     it("applies move cursor when selected and canMove", () => {

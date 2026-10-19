@@ -13,6 +13,7 @@ and this project adheres (more or less) to [Semantic Versioning](http://semver.o
 * Point the `style` export condition at `dist/style.css`; `dist/Timeline.css` is not emitted by the build.
 * Move the sidebar row `line-height` from an inline style to the stylesheet (via the `--rct-sidebar-row-height` CSS variable), so multi-line `groupRenderer` content can override it with `.rct-sidebar-row { line-height: normal; }`.
 * Export `ItemRendererProps`, `GetItemPropsParams`, `GetResizeProps` and `TimelineContextType` so custom `itemRenderer`s can be typed without reaching into internal modules.
+* Theme item colours and the header background through CSS variables: `--rct-item-background`, `--rct-item-color`, `--rct-item-border-color` (plus `--rct-item-selected-*`) and `--rct-header-background`. Defaults are unchanged; `Timeline.scss` sets them from the `$item-*` and `$sidebar-background-color` variables, several of which previously had no effect.
 
 ## 0.30.0 (beta.19)
 
