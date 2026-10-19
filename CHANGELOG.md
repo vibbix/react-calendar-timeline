@@ -14,11 +14,11 @@ and this project adheres (more or less) to [Semantic Versioning](http://semver.o
 * Move the sidebar row `line-height` from an inline style to the stylesheet (via the `--rct-sidebar-row-height` CSS variable), so multi-line `groupRenderer` content can override it with `.rct-sidebar-row { line-height: normal; }`.
 * Export `ItemRendererProps`, `GetItemPropsParams`, `GetResizeProps` and `TimelineContextType` so custom `itemRenderer`s can be typed without reaching into internal modules.
 * Theme item colours and the header background through CSS variables: `--rct-item-background`, `--rct-item-color`, `--rct-item-border-color` (plus `--rct-item-selected-*`) and `--rct-header-background`. Defaults are unchanged; `Timeline.scss` sets them from the `$item-*` and `$sidebar-background-color` variables, several of which previously had no effect.
+* Let sidebar headers inherit the text color when no color is provided. Closes #1044.
 
 ## 0.30.0 (beta.19)
 
 * Fix crash (`Cannot read properties of null (reading 'x')`) during two-finger pinch-zoom on touch devices in ScrollElement.
-* Let sidebar headers inherit the text color when no color is provided. Closes #1044.
 
 ## 0.30.0 (beta.18)
 
