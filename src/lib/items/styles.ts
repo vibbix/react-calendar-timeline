@@ -1,24 +1,25 @@
 export const overridableStyles = {
   fontSize: 12,
-  color: "white",
+  color: "var(--rct-item-color, white)",
   cursor: "pointer",
-  background: "#2196f3",
+  background: "var(--rct-item-background, #2196f3)",
   borderTopWidth: "1px",
   borderBottomWidth: "1px",
   borderLeftWidth: "1px",
   borderRightWidth: "1px",
   borderStyle: "solid",
-  borderColor: "#1a6fb3",
+  borderColor: "var(--rct-item-border-color, #1a6fb3)",
   zIndex: 80,
 };
 export const selectedStyle = {
-  background: "#ffc107",
+  color: "var(--rct-item-selected-color, white)",
+  background: "var(--rct-item-selected-background, #ffc107)",
   borderTopWidth: "1px",
   borderLeftWidth: "1px",
   borderRightWidth: "1px",
   borderBottomWidth: "1px",
   borderStyle: "solid",
-  borderColor: "#ff9800",
+  borderColor: "var(--rct-item-selected-border-color, #ff9800)",
   zIndex: 82,
 };
 export const selectedAndCanMove = {

@@ -7,6 +7,8 @@ and this project adheres (more or less) to [Semantic Versioning](http://semver.o
 
 ## Unreleased
 
+* Theme item colours and the header background through CSS variables: `--rct-item-background`, `--rct-item-color`, `--rct-item-border-color` (plus `--rct-item-selected-*`) and `--rct-header-background`. Defaults are unchanged; `Timeline.scss` sets them from the `$item-*` and `$sidebar-background-color` variables, several of which previously had no effect.
+
 ## 0.30.0 (beta.19)
 
 * Fix crash (`Cannot read properties of null (reading 'x')`) during two-finger pinch-zoom on touch devices in ScrollElement.

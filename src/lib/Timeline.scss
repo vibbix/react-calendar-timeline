@@ -1,3 +1,5 @@
+@use "sass:meta";
+
 $item-color: white !default;
 $item-background: #2196f3 !default;
 $item-border: 1px solid #1a6fb3 !default;
@@ -18,6 +20,33 @@ $weekend: rgba(250, 246, 225, 0.5) !default;
 
 $date-header-background: rgb(240, 240, 240) !default;
 $date-header-color: #fff !default;
+
+@function border-color($border) {
+  @each $part in $border {
+    @if meta.type-of($part) == color {
+      @return $part;
+    }
+  }
+  @return null;
+}
+
+$item-border-color: border-color($item-border);
+$item-selected-border-color: border-color($item-selected-border);
+
+// On :root so a consumer can override these on any ancestor of the timeline.
+:root {
+  --rct-item-color: #{$item-color};
+  --rct-item-background: #{$item-background};
+  --rct-item-selected-color: #{$item-selected-color};
+  --rct-item-selected-background: #{$item-selected-background};
+  --rct-header-background: #{$sidebar-background-color};
+  @if $item-border-color {
+    --rct-item-border-color: #{$item-border-color};
+  }
+  @if $item-selected-border-color {
+    --rct-item-selected-border-color: #{$item-selected-border-color};
+  }
+}
 
 .react-calendar-timeline {
   * {
@@ -152,8 +181,7 @@ $date-header-color: #fff !default;
   }
 
   .rct-header-root {
-    background: $sidebar-background-color;
-    //color: #fff;
+    background: var(--rct-header-background);
     border-bottom: 1px solid $border-color;
   }
 
