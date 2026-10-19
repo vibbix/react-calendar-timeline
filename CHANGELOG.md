@@ -18,6 +18,7 @@ and this project adheres (more or less) to [Semantic Versioning](http://semver.o
 ## 0.30.0 (beta.19)
 
 * Fix crash (`Cannot read properties of null (reading 'x')`) during two-finger pinch-zoom on touch devices in ScrollElement.
+* Let sidebar headers inherit the text color when no color is provided. Closes #1044.
 
 ## 0.30.0 (beta.18)
 
