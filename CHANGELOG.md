@@ -8,6 +8,7 @@ and this project adheres (more or less) to [Semantic Versioning](http://semver.o
 ## Unreleased
 
 * Theme item colours and the header background through CSS variables: `--rct-item-background`, `--rct-item-color`, `--rct-item-border-color` (plus `--rct-item-selected-*`) and `--rct-header-background`. Defaults are unchanged; `Timeline.scss` sets them from the `$item-*` and `$sidebar-background-color` variables, several of which previously had no effect.
+* Make the rest of the item presentation and the timeline chrome themeable through CSS variables, with unchanged defaults: `--rct-item-cursor`, `--rct-item-font-size`, `--rct-item-border-width`, `--rct-item-border-style`, `--rct-item-line-height`, `--rct-border-color`, `--rct-row-even-background`, `--rct-row-odd-background`, `--rct-weekend-background`, `--rct-date-header-background`, `--rct-date-header-color` and `--rct-cursor-line-background`. The item `line-height` moves from an inline style to the stylesheet (via `--rct-item-height`).
 
 ## 0.30.0 (beta.19)
 
