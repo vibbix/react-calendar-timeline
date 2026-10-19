@@ -11,6 +11,7 @@ and this project adheres (more or less) to [Semantic Versioning](http://semver.o
 * Mark `*.css` and `*.scss` as side effects in `package.json` so bundlers no longer tree-shake `import 'react-calendar-timeline/style.css'`.
 * Remove `interactjs` from `peerDependencies`; it is bundled into `dist`, so consumers no longer need to install it.
 * Point the `style` export condition at `dist/style.css`; `dist/Timeline.css` is not emitted by the build.
+* Move the sidebar row `line-height` from an inline style to the stylesheet (via the `--rct-sidebar-row-height` CSS variable), so multi-line `groupRenderer` content can override it with `.rct-sidebar-row { line-height: normal; }`.
 
 ## 0.30.0 (beta.19)
 
