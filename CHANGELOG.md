@@ -8,6 +8,9 @@ and this project adheres (more or less) to [Semantic Versioning](http://semver.o
 ## Unreleased
 
 * Fix group heights and item placement being shuffled when some group ids are integer-like (e.g. `"2936407"`), caused by `getGroupedItems` filling slots in `Object.keys` order instead of group order.
+* Mark `*.css` and `*.scss` as side effects in `package.json` so bundlers no longer tree-shake `import 'react-calendar-timeline/style.css'`.
+* Remove `interactjs` from `peerDependencies`; it is bundled into `dist`, so consumers no longer need to install it.
+* Point the `style` export condition at `dist/style.css`; `dist/Timeline.css` is not emitted by the build.
 
 ## 0.30.0 (beta.19)
 
